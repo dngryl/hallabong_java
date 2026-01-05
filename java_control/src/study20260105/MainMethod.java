@@ -72,15 +72,33 @@ public class MainMethod {
 		int user = sc.nextInt();
 		int com = (int)Math.floor(Math.random()*3)+1;
 		
+		System.out.println("컴퓨터: "+ com + " 나: "+ user);
 		
-		if ((user == 1 && com == 3) || (user == 2 && com == 1) || (user == 3 && com == 2)) {
-				System.out.println("내가 이겼습니다.");
-		}else if ((com == 1 && user == 3) || (com == 2 && user == 1) || (user == 3 && com == 2)) {
-			System.out.println("내가 졌습니다.");
-	    }else 
-	    	System.out.println("비겼습니다.");
+		//내가 작성
+//		if ((user == 1 && com == 3) || (user == 2 && com == 1) || (user == 3 && com == 2)) {
+//				System.out.println("내가 이겼습니다.");
+//		}else if ((com == 1 && user == 3) || (com == 2 && user == 1) || (user == 3 && com == 2)) {
+//			System.out.println("내가 졌습니다.");
+//	    }else 
+//	    	System.out.println("비겼습니다.");
+//		
+//		
+		// 강사님 작성 v1
+//		if (user == com)
+//			System.out.println("비김");
+//		else if ((user== 1 && com == 3) || (user==2 && com==1) || (user==3&&com==2)) {
+//			System.out.println("나의 승리");
+//		}else
+//			System.out.println("나의 패배");
 		
-		
-	}
+		// 강사님 작성 v2
+		int res = user - com;
+		if (res==0)
+			System.out.println("비김");
+		else if(res ==-2 || res ==1)
+			System.out.println("나의 승리");
+		else
+			System.out.println("나의 패배");
 
+	}
 }
